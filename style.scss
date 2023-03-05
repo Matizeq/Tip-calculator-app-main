@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+$Strong-cyan: hsl(172, 67%, 45%);
+$Very-dark-cyan: hsl(183, 100%, 15%);
+$Dark-grayish-cyan: hsl(186, 14%, 43%);
+$Grayish-cyan: hsl(184, 14%, 56%);
+$Light-grayish-cyan: hsl(185, 41%, 84%);
+$Very-light-grayish-cyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+body {
+  font-family: "Space Mono", monospace;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $Light-grayish-cyan;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  max-width: 100px;
+  margin-bottom: 70px;
+  color: $Dark-grayish-cyan;
+  font-size: 26px;
+  text-align: center;
+}
+
+main {
+  background-color: $White;
+  border-radius: 20px;
+  padding: 30px;
+  width: 350px;
+  .options {
+    margin-bottom: 20px;
+    padding: 0 5px;
+    label {
+      position: relative;
+      .label--text {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          font-size: 14px;
+          margin-bottom: 10px;
+          color: $Grayish-cyan;
+        }
+        h2:nth-child(2) {
+          color: red;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+      .icon {
+        position: absolute;
+        top: 48px;
+        left: 15px;
+      }
+      input {
+        font-family: "Space Mono", monospace;
+        font-size: 24px;
+        width: 100%;
+        background-color: $Very-light-grayish-cyan;
+        color: $Very-dark-cyan;
+        border: none;
+        padding: 5px 20px;
+        text-align: end;
+        border-radius: 5px;
+      }
+    }
+    .tips--container {
+      margin: 30px 0;
+      h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: $Grayish-cyan;
+      }
+      .tips {
+        max-width: 380px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 15px;
+        .tip {
+          border: none;
+          border-radius: 5px;
+          padding: 5px 20px;
+          width: 100%;
+          font-size: 20px;
+          background-color: $Very-dark-cyan;
+          color: $White;
+          font-family: "Space Mono", monospace;
+          cursor: pointer;
+        }
+        .tip-active {
+          background-color: $Strong-cyan;
+          color: $Very-dark-cyan;
+        }
+        .tip--input {
+          background-color: $Very-light-grayish-cyan;
+          text-align: end;
+          max-width: 100%;
+          cursor: auto;
+          color: $Very-dark-cyan;
+        }
+      }
+    }
+  }
+  .calculator {
+    background-color: $Very-dark-cyan;
+    width: 100%;
+    padding: 30px 20px 20px 20px;
+    border-radius: 15px;
+    .values--container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+      h3 {
+        font-size: 15px;
+        color: $White;
+        width: 100px;
+        a {
+          font-size: 12px;
+          color: $Grayish-cyan;
+        }
+      }
+      .total {
+        width: 60px;
+      }
+      .values {
+        font-size: 34px;
+        color: $Strong-cyan;
+      }
+    }
+    .reset {
+      width: 100%;
+      padding: 10px 0;
+      background-color: $Strong-cyan;
+      color: $Very-dark-cyan;
+      border: none;
+      border-radius: 5px;
+      font-size: 17px;
+      text-transform: uppercase;
+      font-family: "Space Mono", monospace;
+      cursor: pointer;
+    }
+    .reset:hover {
+      transition: 0.3s ease-in-out;
+      background-color: $Light-grayish-cyan;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  main {
+    display: flex;
+    min-width: 860px;
+    .options {
+      width: 50%;
+      margin-right: 40px;
+      .tips--container {
+        .tips {
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+      }
+    }
+    .calculator {
+      width: 50%;
+      position: relative;
+      padding: 40px 30px;
+      .reset {
+        position: absolute;
+        width: 85%;
+        bottom: 30px;
+      }
+    }
+  }
+}

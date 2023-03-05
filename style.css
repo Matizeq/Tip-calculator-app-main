@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(185, 41%, 84%);
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  max-width: 100px;
+  margin-bottom: 70px;
+  color: hsl(186, 14%, 43%);
+  font-size: 26px;
+  text-align: center;
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  padding: 30px;
+  width: 350px;
+}
+main .options {
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+main .options label {
+  position: relative;
+}
+main .options label .label--text {
+  display: flex;
+  justify-content: space-between;
+}
+main .options label .label--text h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: hsl(184, 14%, 56%);
+}
+main .options label .label--text h2:nth-child(2) {
+  color: red;
+}
+main .options label .label--text .hidden {
+  display: none;
+}
+main .options label .icon {
+  position: absolute;
+  top: 48px;
+  left: 15px;
+}
+main .options label input {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  padding: 5px 20px;
+  text-align: end;
+  border-radius: 5px;
+}
+main .options .tips--container {
+  margin: 30px 0;
+}
+main .options .tips--container h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: hsl(184, 14%, 56%);
+}
+main .options .tips--container .tips {
+  max-width: 380px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+}
+main .options .tips--container .tips .tip {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  width: 100%;
+  font-size: 20px;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Space Mono", monospace;
+  cursor: pointer;
+}
+main .options .tips--container .tips .tip-active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+main .options .tips--container .tips .tip--input {
+  background-color: hsl(189, 41%, 97%);
+  text-align: end;
+  max-width: 100%;
+  cursor: auto;
+  color: hsl(183, 100%, 15%);
+}
+main .calculator {
+  background-color: hsl(183, 100%, 15%);
+  width: 100%;
+  padding: 30px 20px 20px 20px;
+  border-radius: 15px;
+}
+main .calculator .values--container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+main .calculator .values--container h3 {
+  font-size: 15px;
+  color: hsl(0, 0%, 100%);
+  width: 100px;
+}
+main .calculator .values--container h3 a {
+  font-size: 12px;
+  color: hsl(184, 14%, 56%);
+}
+main .calculator .values--container .total {
+  width: 60px;
+}
+main .calculator .values--container .values {
+  font-size: 34px;
+  color: hsl(172, 67%, 45%);
+}
+main .calculator .reset {
+  width: 100%;
+  padding: 10px 0;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: "Space Mono", monospace;
+  cursor: pointer;
+}
+main .calculator .reset:hover {
+  transition: 0.3s ease-in-out;
+  background-color: hsl(185, 41%, 84%);
+}
+
+@media (min-width: 700px) {
+  main {
+    display: flex;
+    min-width: 860px;
+  }
+  main .options {
+    width: 50%;
+    margin-right: 40px;
+  }
+  main .options .tips--container .tips {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  main .calculator {
+    width: 50%;
+    position: relative;
+    padding: 40px 30px;
+  }
+  main .calculator .reset {
+    position: absolute;
+    width: 85%;
+    bottom: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */

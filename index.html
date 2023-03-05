@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1>Spli tter</h1>
+    <main>
+      <section class="options">
+        <label for="bill">
+          <div class="bill--label label--text">
+            <h2>Bill</h2>
+            <h2 class="hidden">Can't be zero</h2>
+          </div>
+          <img src="images/icon-dollar.svg" alt="" class="icon" />
+          <input type="number" class="bill" placeholder="0" />
+        </label>
+        <div class="tips--container">
+          <h2>Select Tip %</h2>
+          <div class="tips">
+            <button class="tip tip--button" type="button">
+              <a class="tip--value">5</a>%
+            </button>
+            <button class="tip tip--button" type="button">
+              <a class="tip--value">10</a>%
+            </button>
+            <button class="tip tip--button" type="button">
+              <a class="tip--value">15</a>%
+            </button>
+            <button class="tip tip--button" type="button">
+              <a class="tip--value">25</a>%
+            </button>
+            <button class="tip tip--button" type="button">
+              <a class="tip--value">50</a>%
+            </button>
+            <input
+              type="number"
+              class="tip tip--input"
+              placeholder="Custom"
+              max="100"
+            />
+          </div>
+        </div>
+        <label for="people">
+          <div class="people--label label--text">
+            <h2>Number of People</h2>
+            <h2 class="hidden">Can't be zero</h2>
+          </div>
+          <img src="images/icon-person.svg" alt="" class="icon" />
+          <input type="number" class="people" placeholder="0" min="0" />
+        </label>
+      </section>
+      <section class="calculator">
+        <div class="values--container">
+          <h3>Tip amount <a>/ person</a></h3>
+          <h2 class="values">$<a class="tip--amount">0.00</a></h2>
+        </div>
+        <div class="values--container">
+          <h3 class="total">Total <a>/ person</a></h3>
+          <h2 class="values">$<a class="total--amount">0.00</a></h2>
+        </div>
+        <button class="reset" type="reset">Reset</button>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
